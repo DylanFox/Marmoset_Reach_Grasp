@@ -1,4 +1,4 @@
-function [unfiltered_data, filtered_data] = ReachGraspImport(~)
+function [unfiltered_data, filtered_data] = ImportData(~)
 %Used to import multiple text files generated from Tracker Software
 %(v4.9.8) into a tabular format. Files are imported, stripped into their
 %individual components and then passed through a noise filter (2nd pass
@@ -18,11 +18,13 @@ function [unfiltered_data, filtered_data] = ReachGraspImport(~)
 %accounts for. This can be changed to whatever file naming format you
 %choose.
 
-%[raw_KinematicTable, filt_KinematicTable] = ReachGraspImport; This will
+%[raw_KinematicTable, filt_KinematicTable] = ImportData; This will
 %produce two tables of N x 9 matrix of raw data inputs and a N x 35 matrix
 %of filtered data where N is the number of trials recorded It might be
 %helpful to include categorical data such as participant/subject no., Exp
 %condition, etc.
+
+% --- Dylan Fox 2018 
 
 %------------IMPORT------------%
 unfiltered_data = dir('GOPR*_*.txt');
