@@ -24,13 +24,19 @@ Explain how to sequence of events - Use example of getting some data out of the 
 
 This stage imports .txt files generated from tracker into the MATLAB environment. Follow the comments in the ImportData.m to ensure the files are named corrected and are within the current directory. Data is also filtered through a 2nd order dual pass butterworth filter with 10hz low pass cut-off frequency. Data is also stripped further into parameters such as peak velocity and time taken to reach the peak. Raw and smoothed data are stored separately.  
 
+**Files to use** - ImportData.m 
+
+**Dependecies** - nansem.m, normalize_var.m 
+
+For demo purposes, you can use the .txt files exported from tracker stored in ExampleTrackerData folder 
+
 ```
 [raw_data, filtered_data] = ImportData;
 ```
 
 ### Stage 2 - Data Analysis and Visualisation 
 
-For demo purposes you can use MasterData.mat to analysis/visualise otherwise rename your dataset to MasterData for convenience as some of these rely on scripts rather than dedicated functions.  
+For demo purposes you can use MasterData_Example.mat to analysis/visualise otherwise rename your dataset to MasterData for convenience as some of these rely on scripts rather than dedicated functions.  
 
 #### Heatmaps 
 
