@@ -10,8 +10,11 @@ This readme as of 10/12/18 remains under development. I aim to streamline this p
 
 [Tracker](https://physlets.org/tracker/) - Software for adding ROI to videos and measuring their trajectories, angles, distance to other ROIs, etc. This software is free and comes with tutorials and test videos to learn with. 
 
-[MATLAB](https://au.mathworks.com/products/matlab.html) - I have used this with all versions from MATLAB 2015b-2017b. 
-
+[MATLAB](https://au.mathworks.com/products/matlab.html) - I have used this with all versions from MATLAB 2015b-2017b.
+    * Statistics and machine learning toolbox 
+    * Signal processing toolbox
+    * Curve fitting toolbox (optional) 
+    
 **Ensure all folders and subfolders are added to the directory path**
 
 ## Running the codes from data import to visualisation
@@ -100,10 +103,15 @@ Parameter = MasterData.AverageMGA;
 Here we modelled all the parameters and asked the question, which parameter(s) predict the likelihood of an animal being lesioned with the highest power? Due to the binary nature of either being lesioned or non-lesioned we opted for the logistic regression model to answer this question. 
 
 ```
-Give examples
+mdl_Cohort = fitglm(AllPredictors(:,[1:16]),'linear','Distribution','binomial', 'link','logit'); 
+figure; 
+plotSlice(mdl_Cohort); 
 ```
 
-**Add demo data and images!!** 
+This model uses the cohort as the response variable (always the last column) while the other columns serve as predictors, sliceplots can be selected and visualised interactively in the prediction slice plot editor. Set bounds to non-simultaneous.
+Alternatively, this can also be done using the curve fitting app within the curve fitting toolbox or the classification learner in the statistics and machine learning toolbox.  
+
+![](./LogRegModel/SlicePlots_example.png)
 
 ## Authors
 
@@ -134,4 +142,6 @@ This program is licensed under GPL v3. See [LICENSE.txt](LICENSE.txt) file in th
 * Created Generate_Heatmaps script 
 * Copied Permutation_PlotData.m into Heatmaps folder and renamed it to Permutation_Heatmap.m, removed the plotting feature to increase speed since only the heatmaps need to be plotted 
 * Added example images for heatmaps, normalised curves and permutation distributions 
+* Condensed LogRegModel folder 
+* Added example tracker data to demo importing 
 
