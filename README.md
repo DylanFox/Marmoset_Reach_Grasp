@@ -35,17 +35,23 @@ For demo purposes you can use MasterData.mat to analysis/visualise otherwise ren
 Here we generate heatmaps for each parameter measured (e.g. max velocity) based on the p-values and effect sizes obtained from a permutation analysis comparing experimental conditions (e.g. control v.s. lesioned or left v.s. right hand). Using example data given just running Generate_Heatmaps.m will provide you with the heatmaps produced in this study.
 
 **Files to use** - Generate_Heatmaps.m 
+
 **Dependecies** - Permutation_Heatmaps.m, permutationTest.m 
 
 ```
 Generate_Heatmaps;
 ```
 
+![](./Heatmaps/Example_Heatmap_pValue.png)
+
+![](./Heatmaps/Example_Heatmap_EffectSize.png)
+
 #### Normalised Curves
 
 For qualitative purposes, it is useful to show grip aperture, velocity and acceleration profiles over the entire reaching to grasp movement. This can show at a glance any changes to the amplitude or the timings of the amplitude. This code normalises time by converting each prehensile movement into a percentage. Data points are interpolated onto 100 points (or extrapolated if there are <100 frames to use). 
 
 **Files to use**  - PlotAverageCurves_shaded.m
+
 **Dependecies** - shadedErrorBar.m, DataPrep_ErrorShade.m
 
 ```
@@ -71,19 +77,24 @@ shadedErrorBar(timei,mean(MGA_ECR_mat,1),std(MGA_ECR_mat)/sqrt(78),'lineprops','
 shadedErrorBar(timei,mean(MGA_ELL_mat,1),std(MGA_ELL_mat)/sqrt(86),'lineprops','g');
 shadedErrorBar(timei,mean(MGA_ELR_mat,1),std(MGA_ELR_mat)/sqrt(86),'lineprops','k');
 ```
-**add image of figure** 
+
+![](./NormalisedCurves/GripApertureProfile.png)
 
 #### Permutation Distributions 
 
 While not used in the published version, I toyed with the idea of showing permutation distributions before settling on heatmaps instead. I kept this in here should you decide this is more fitting for your dataset/question. 
 
 **Files to use** - Permutation_PlotData.m 
+
 **Dependecies** - permutationTest.m
+
 ```
 Parameter = MasterData.AverageMGA;
 [AverageMGA_p,AverageMGA_eff] = Permutation_PlotData(MasterData,Parameter,AllPredictors);
 ```
 
+![](./PermutationDistributions/PermutationDistribution_Example.png)        
+      
 #### Logistic Regression Model 
 
 Here we modelled all the parameters and asked the question, which parameter(s) predict the likelihood of an animal being lesioned with the highest power? Due to the binary nature of either being lesioned or non-lesioned we opted for the logistic regression model to answer this question. 
