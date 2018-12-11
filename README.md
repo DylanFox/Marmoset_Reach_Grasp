@@ -133,14 +133,15 @@ This program is licensed under GPL v3. See [LICENSE.txt](LICENSE.txt) file in th
 
 ## Change Log 
 
-10th December 2018
+**10th December 2018**
 
 * Removed unused scripts, figures and .mat files 
 * Added commentary to ImportData.m for greater accessibility
 * Changed variable names across the board to be more intuitive 
 * Removed redundant lines in PlotAverageCurves_shaded.m
 
-11th December 2018 
+**11th December 2018**
+
 * Removed unfiltered data from a previous project 
 * Created scripts for generating permutation distributions of the dataset (could be condensed into a function but this is not a priority) 
 * Modified line 123 of permutationTest.m to plot a red dashed line for the observed difference rather than a red asterisk
