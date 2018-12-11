@@ -2,18 +2,17 @@
 
 Code base for the processing and visualisation of kinematic data used during part of my PhD project. It should be noted that the program used in this project was created solely to meet the needs of importing kinematic data and analysing it. It is not fully optimised or flexible to different approaches. For best results, please follow the steps shown below. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-## Current status of readme 
-
-This readme as of 10/12/18 remains under development. I aim to streamline this process as much as possible, some files will be removed over the next week and reorganised in a (hopefully) simple to follow format. 
-
 ### Prerequisites
 
 [Tracker](https://physlets.org/tracker/) - Software for adding ROI to videos and measuring their trajectories, angles, distance to other ROIs, etc. This software is free and comes with tutorials and test videos to learn with. 
 
 [MATLAB](https://au.mathworks.com/products/matlab.html) - I have used this with all versions from MATLAB 2015b-2017b.
-    * Statistics and machine learning toolbox 
-    * Signal processing toolbox
-    * Curve fitting toolbox (optional) 
+
+   * Statistics and machine learning toolbox 
+    
+   * Signal processing toolbox
+    
+   * Curve fitting toolbox (optional) 
     
 **Ensure all folders and subfolders are added to the directory path**
 
