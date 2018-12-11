@@ -2,7 +2,7 @@
 
 Code base for the processing and visualisation of kinematic data used during part of my PhD project. It should be noted that the program used in this project was created solely to meet the needs of importing kinematic data and analysing it. It is not fully optimised or flexible to different approaches. For best results, please follow the steps shown below. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-### Prerequisites
+## Prerequisites
 
 [Tracker](https://physlets.org/tracker/) - Software for adding ROI to videos and measuring their trajectories, angles, distance to other ROIs, etc. This software is free and comes with tutorials and test videos to learn with. 
 
@@ -17,8 +17,6 @@ Code base for the processing and visualisation of kinematic data used during par
 **Ensure all folders and subfolders are added to the directory path**
 
 ## Running the program from data import to visualisation
-
-Explain how to sequence of events - Use example of getting some data out of the system or using it for a little demo
 
 ### Stage 1 - Data import 
 
