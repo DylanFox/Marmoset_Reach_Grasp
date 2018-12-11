@@ -32,10 +32,13 @@ For demo purposes you can use MasterData.mat to analysis/visualise otherwise ren
 
 #### Heatmaps 
 
-Here we generate heatmaps for each parameter measured (e.g. max velocity) based on the p-values and effect sizes obtained from a permutation analysis comparing experimental conditions (e.g. control v.s. lesioned or left v.s. right hand) 
+Here we generate heatmaps for each parameter measured (e.g. max velocity) based on the p-values and effect sizes obtained from a permutation analysis comparing experimental conditions (e.g. control v.s. lesioned or left v.s. right hand). Using example data given just running Generate_Heatmaps.m will provide you with the heatmaps produced in this study.
+
+**Files to use** - Generate_Heatmaps.m 
+**Dependecies** - Permutation_Heatmaps.m, permutationTest.m 
 
 ```
-Give examples
+Generate_Heatmaps;
 ```
 
 #### Normalised Curves
@@ -74,8 +77,11 @@ shadedErrorBar(timei,mean(MGA_ELR_mat,1),std(MGA_ELR_mat)/sqrt(86),'lineprops','
 
 While not used in the published version, I toyed with the idea of showing permutation distributions before settling on heatmaps instead. I kept this in here should you decide this is more fitting for your dataset/question. 
 
+**Files to use** - Permutation_PlotData.m 
+**Dependecies** - permutationTest.m
 ```
-Give examples
+Parameter = MasterData.AverageMGA;
+[AverageMGA_p,AverageMGA_eff] = Permutation_PlotData(MasterData,Parameter,AllPredictors);
 ```
 
 #### Logistic Regression Model 
@@ -94,7 +100,7 @@ Give examples
 
 ## License
 
-This code is licensed under GPL v3. See [LICENSE.txt](LICENSE.txt) file in the repository for details.
+This program is licensed under GPL v3. See [LICENSE.txt](LICENSE.txt) file in the repository for details.
 
 ## Acknowledgments
 
@@ -109,3 +115,12 @@ This code is licensed under GPL v3. See [LICENSE.txt](LICENSE.txt) file in the r
 * Added commentary to ImportData.m for greater accessibility
 * Changed variable names across the board to be more intuitive 
 * Removed redundant lines in PlotAverageCurves_shaded.m
+
+11th December 2018 
+* Removed unfiltered data from a previous project 
+* Created scripts for generating permutation distributions of the dataset (could be condensed into a function but this is not a priority) 
+* Modified line 123 of permutationTest.m to plot a red dashed line for the observed difference rather than a red asterisk
+* Created Generate_Heatmaps script 
+* Copied Permutation_PlotData.m into Heatmaps folder and renamed it to Permutation_Heatmap.m, removed the plotting feature to increase speed since only the heatmaps need to be plotted 
+* Added example images for heatmaps, normalised curves and permutation distributions 
+
