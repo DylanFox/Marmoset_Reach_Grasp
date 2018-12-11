@@ -16,7 +16,7 @@ Code base for the processing and visualisation of kinematic data used during par
     
 **Ensure all folders and subfolders are added to the directory path**
 
-## Running the codes from data import to visualisation
+## Running the program from data import to visualisation
 
 Explain how to sequence of events - Use example of getting some data out of the system or using it for a little demo
 
