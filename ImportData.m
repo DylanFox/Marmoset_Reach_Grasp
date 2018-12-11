@@ -19,7 +19,7 @@ function [unfiltered_data, filtered_data] = ImportData(~)
 %choose.
 
 %[raw_KinematicTable, filt_KinematicTable] = ImportData; This will
-%produce two tables of N x 9 matrix of raw data inputs and a N x 35 matrix
+%produce two tables of N x 7 matrix of raw data inputs and a N x 33 matrix
 %of filtered data where N is the number of trials recorded It might be
 %helpful to include categorical data such as participant/subject no., Exp
 %condition, etc.
